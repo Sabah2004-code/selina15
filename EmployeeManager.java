@@ -6,7 +6,21 @@ public class EmployeeManager {
 
     public static void main(String[] args) {
 
-        // Check arguments
+        // ===== Task #2: Argument Count Check =====
+        if (args.length != 1) {
+            System.out.println("Error: Wrong number of arguments!");
+            System.out.println("Usage examples:");
+            System.out.println("  java EmployeeManager l");
+            System.out.println("  java EmployeeManager s");
+            System.out.println("  java EmployeeManager +John");
+            System.out.println("  java EmployeeManager ?John");
+            System.out.println("  java EmployeeManager uJohn");
+            System.out.println("  java EmployeeManager dJohn");
+            return;  // terminate early
+        }
+
+        // ===== Original Code From Here On =====
+
         if (args[0].equals("l")) {
 
             System.out.println("Loading data ...");
